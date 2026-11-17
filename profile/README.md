@@ -41,7 +41,8 @@ state them openly so that each can be questioned.
 
 ## What "computable" means here
 
-The computation is shaped like the space it describes:
+The computation is shaped like the space it describes. The four properties
+below follow from the principles in the next section:
 
 1. **Shaped like the space.** The space is split into regions, each with its own
    small solver (classical or learned). Regions exchange only the values at
@@ -56,14 +57,22 @@ The computation is shaped like the space it describes:
 
 ## Principles
 
-1. Small computing devices are embedded in physical space.
-2. Devices of different makers and owners cooperate through a common interface.
-3. Devices split the physics among themselves, communicating only with neighbours.
-4. **What goes to the centre:** never raw sensor data. Normally a summary of the
-   state; when a forecast faster than real time is needed, the state the devices
-   have already fitted to their measurements, so that a central computer can
-   join temporarily, compute ahead with the same solvers and identical bits, and
-   leave again.
+1. **Computation is placed where the physics is.** The device that measures a
+   region computes that region, and devices communicate only with their
+   neighbours.
+2. **Different components meet only through contracts at their borders.** Local
+   components that differ in maker, owner and kind — classical solvers, learned
+   models, and in future physical or quantum devices — are connected only
+   through what is agreed at their shared borders: what is exchanged, the
+   stability condition, the error bound, and how it is checked.
+3. **Keeping those contracts is checkable.** Where components are digital and
+   deterministic, the check is bit-for-bit equality; where they are not, it is
+   an error bound.
+4. **The centre does not disappear.** Raw sensor data never goes to the centre.
+   Normally a summary of the state does; when a forecast faster than real time
+   is needed, the state the devices have already fitted to their measurements is
+   handed over with identical bits, so that a central computer can join
+   temporarily, compute ahead with the same solvers, and leave again.
 
 ## Limits we state up front
 
