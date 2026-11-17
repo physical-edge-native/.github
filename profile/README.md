@@ -64,7 +64,10 @@ below follow from the principles in the next section:
    components that differ in maker, owner and kind — classical solvers, learned
    models, and in future physical or quantum devices — are connected only
    through what is agreed at their shared borders: what is exchanged, the
-   stability condition, the error bound, and how it is checked.
+   stability condition, the error bound, and how it is checked. Components are
+   kept isolated: one hosted on another owner's device should reach nothing
+   beyond its contract (in dyne, solvers run as WebAssembly, which cannot touch
+   memory outside its own or call anything it has not been granted).
 3. **Keeping those contracts is checkable.** Where components are digital and
    deterministic, the check is bit-for-bit equality; where they are not, it is
    an error bound.
