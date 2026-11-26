@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question (GitHub Discussions)
+    url: https://github.com/physical-edge-native/dyne/discussions
+    about: Questions about using the projects, ideas, and things you built.
+  - name: Chat and help (Discord)
+    url: https://discord.gg/DuP494hVNX
+    about: Conversation, help, and finding people to work with.
